@@ -1,0 +1,26 @@
+---
+import About from "../components/About.astro";
+import Contact from "../components/Contact.astro";
+import Home from "../components/Home.astro";
+import Navigation from "../components/Navigation.jsx";
+import Skills from "../components/Skills.astro";
+import Layout from "../layouts/Layout.astro";
+import bgImage from "../images/home-bg.jpg";
+---
+
+<Layout title="Shadows Code - Desarrollador web">
+	<Navigation client:load />
+	<main>
+		<img
+			class="absolute left-0 top-0 object-cover w-full h-screen brightness-[.15]"
+			src={bgImage}
+			alt="Anime wallpaper 4k"
+		/>
+		<div class="relative z-10">
+			<Home />
+			<About />
+			<Skills />
+			<Contact />
+		</div>
+	</main>
+</Layout>

@@ -1,0 +1,16 @@
+---
+import Card from "./Card.astro";
+---
+
+<section id="skills" class="max-w-[1080px] px-[20px] mx-auto py-12">
+    <h2 class="mb-3 text-2xl">Mis habilidades</h2>
+    <p class="mb-10 text-lg text-primary">Nota: Estas solo son las más destacables.</p>
+    <div class="grid grid-cols-3 gap-8 max-[1080px]:grid-cols-2 max-[580px]:grid-cols-1">
+        <Card title="React Js" body="Mi framework favorito por excelencia. La gran mayoría de las veces elijo usar React en conjunto con Next.js" />
+        <Card title="TailwindCSS" body="Suelo usarlo la mayoría de las veces por ser una gran opción cuando se desea ser veloces al desarrollar." />
+        <Card title="Flutter" body="Sin duda la mejor opción para aplicaciones multiplataforma, aunque apenas comencé a aprenderlo." />
+        <Card title="Nest Js" body="Una opción increíble para el lado del Backend, al usar TypeScript se mantiene una gran escalabilidad." />
+        <Card title="PostgresQL" body="La base de datos relacional que más he usado, suelo usarla en conjunto con TypeORM para mayor sencilles." />
+        <Card title="GraphQL" body="No está de más para darle mucho más dinamismo a los servidores Backend dejando a un lado las básicas Rest API" />
+    </div>
+</section>

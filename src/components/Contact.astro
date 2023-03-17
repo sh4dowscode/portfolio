@@ -1,0 +1,86 @@
+---
+import Linkedin from "../images/linkedin.svg";
+import Phone from "../images/phone.svg";
+import Mail from "../images/mail.svg";
+import Github from "../images/github.svg";
+const handleSubmit = async (event: Event) => {
+    event.preventDefault();
+    console.log("Aun no esta implementado :D");
+};
+---
+
+<section id="contact" class="max-w-[1080px] px-[20px] mx-auto py-20">
+    <h2 class="text-2xl mb-8">Contáctame</h2>
+    <div class="grid grid-cols-2 gap-8 max-[1080px]:grid-cols-1">
+        <div class="bg-secondary p-6 rounded-sm max-h-min">
+            <h2 class="text-2xl mb-3">Ponte en contacto conmigo</h2>
+            <p class="text-lg mb-8 text-gray-400">
+                Contesto en el menor tiempo posible :)
+            </p>
+            <div class="flex items-center gap-5">
+                <div
+                    class="bg-primary w-8 h-8 rounded-sm flex justify-center items-center"
+                >
+                    <img src={Phone} alt="Phone Icon" />
+                </div>
+                <div>+52 5618990263</div>
+            </div>
+            <a
+                href="https://www.linkedin.com/in/alexis-gonzalez-a17791267/"
+                class="flex items-center gap-5 my-6"
+                target="_blank"
+            >
+                <div
+                    class="bg-primary w-8 h-8 rounded-sm flex justify-center items-center"
+                >
+                    <img src={Linkedin} alt="Linkedin Icon" />
+                </div>
+                <div>Linkedin</div>
+            </a>
+            <a
+                href="https://github.com/sh4dowscode"
+                class="flex items-center gap-5 my-6"
+                target="_blank"
+            >
+                <div
+                    class="bg-primary w-8 h-8 rounded-sm flex justify-center items-center"
+                >
+                    <img src={Github} alt="Github Icon" />
+                </div>
+                <div>Github</div>
+            </a>
+            <a
+                href="mailto:sh4dowscode@gmail.com"
+                class="flex items-center gap-5"
+            >
+                <div
+                    class="bg-primary w-8 h-8 rounded-sm flex justify-center items-center"
+                >
+                    <img src={Mail} alt="Imail Icon" />
+                </div>
+                <div>sh4dowscode@gmail.com</div>
+            </a>
+        </div>
+        <div class="px-2 py-4">
+            <astro-form on:submit={handleSubmit} class="flex flex-col gap-5">
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Correo electrónico"
+                    class="bg-transparent text-white py-2 px-3 border border-neutral-800 rounded-sm outline-none resize-none"
+                    required
+                />
+                <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Por favor cuentame, ¿Cómo puedo ayudarte?"
+                    class="bg-transparent text-white py-2 px-3 border border-neutral-800 rounded-sm outline-none resize-none h-36"
+                    required></textarea>
+                <button class="py-2 bg-primary rounded-sm" type="submit"
+                    >Enviar ahora</button
+                >
+            </astro-form>
+        </div>
+    </div>
+</section>
